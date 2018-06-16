@@ -176,7 +176,7 @@ func (l *lexer) acceptRun(valid string) {
 func (l *lexer) errorf(format string, args ...interface{}) stateFn {
 	l.items <- item{
 		itemError,
-		fmt.Sprintf(format, args),
+		fmt.Sprintf(format, args...),
 	}
 	return nil
 }
