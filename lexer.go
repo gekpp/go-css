@@ -77,7 +77,7 @@ func lexProp(l *lexer) stateFn {
 		return nil
 	}
 
-	if !l.accept("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ-_") {
+	if !l.accept("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_") {
 		return l.errorf("bad property name syntax: it must start with a letter")
 	}
 
